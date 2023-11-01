@@ -1,0 +1,11 @@
+name: Essencial
+version: '${project.version}'
+main: io.github.ruanosena.essencial.Essencial
+api-version: '1.20'
+commands:
+  definicio:
+    description: Define um local como início
+    usage: /<command>
+  inicio:
+    description: Teleporta-se para o início
+    usage: /<command>
