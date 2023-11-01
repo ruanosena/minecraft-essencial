@@ -1,7 +1,9 @@
 package io.github.ruanosena.essencial;
 
+import io.github.ruanosena.essencial.comandos.DefBoasVindasComando;
 import io.github.ruanosena.essencial.comandos.DefInicioComando;
 import io.github.ruanosena.essencial.comandos.InicioComando;
+import io.github.ruanosena.essencial.ouvintes.EntrarOuvinte;
 import io.github.ruanosena.essencial.ouvintes.InicioOuvinte;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,8 +19,10 @@ public final class Essencial extends JavaPlugin {
 
         Objects.requireNonNull(this.getCommand("definicio")).setExecutor(new DefInicioComando(this));
         Objects.requireNonNull(this.getCommand("inicio")).setExecutor(new InicioComando(this));
-
         getServer().getPluginManager().registerEvents(new InicioOuvinte(this), this);
+
+        Objects.requireNonNull(this.getCommand("defboasvindas")).setExecutor(new DefBoasVindasComando(this));
+        getServer().getPluginManager().registerEvents(new EntrarOuvinte(this), this);
     }
 
     @Override

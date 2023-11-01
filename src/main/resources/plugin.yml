@@ -9,3 +9,6 @@ commands:
   inicio:
     description: Teleporta-se para o início
     usage: /<command>
+  defboasvindas:
+    description: Define a mensagem de boas-vindas
+    usage: /<command> [mensagem]
